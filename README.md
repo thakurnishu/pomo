@@ -1,6 +1,7 @@
 # Pomodoro Timer 
 
 This is my personal pomo tool for time management, written in Golang **not by me :)** (AI)
+Build for Tmux Users Only.
 
 Feel Free to use it.
 
