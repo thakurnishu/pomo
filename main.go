@@ -62,7 +62,7 @@ func startPomodoro(duration time.Duration) {
 			remaining := endTime.Sub(now).Truncate(time.Second)
 			minutes := int(remaining.Minutes())
 			seconds := int(remaining.Seconds()) % 60
-			status := fmt.Sprintf("🍅 %02d:%02d left", minutes, seconds)
+			status := fmt.Sprintf("🍅 %02d:%02d", minutes, seconds)
 			cmd := exec.Command("tmux", "set-option", "-g", "status-right", status)
 			if err := cmd.Run(); err != nil {
 				log.Printf("Error updating tmux status-right: %v", err)
